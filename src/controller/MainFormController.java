@@ -25,5 +25,8 @@ public class MainFormController {
         lstLanguages.setItems(languages);
     }
     public void btnSaveOnAction(ActionEvent actionEvent) {
+        lstLanguages.getItems().add(txtLanguages.getText());
+        txtLanguages.clear();
+        txtLanguages.requestFocus();
     }
 }
