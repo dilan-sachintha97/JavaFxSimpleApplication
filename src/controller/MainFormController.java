@@ -13,6 +13,10 @@ public class MainFormController {
 
     public void initialize(){
         setListData();
+        //====================== Added Lisiner
+        lstLanguages.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            txtSelectedLanguage.setText(newValue);
+        });
     }
 
     private void setListData(){
